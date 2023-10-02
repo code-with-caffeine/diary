@@ -18,7 +18,7 @@ htext.addEventListener('click', ()=>{
 	settings.classList.toggle('hide')
 })
 
-for (var i = 1; i < 11; i++) {
+for (var i = 1; i < 31; i++) {
 	dateArea.innerHTML+='<li class="date"><p class="dtext"> Date:&emsp;January&ensp;'+i+',&ensp;2023 </p></li>'
 }
 

@@ -156,11 +156,10 @@ body{
 	display: flex;
 	flex-direction: column;
 	color: white;
-	justify-content: center;
 	align-items: left;
 	list-style: none;
 	overflow-y:scroll;
-	overflow-x: hidden;
+	
 }
 
 .date-area::-webkit-scrollbar {
@@ -214,10 +213,10 @@ body{
 	outline: none;
 }
 
-
 .save{
 	/*margin-left: auto;
 	margin-right: 0;*/
+	width: fit-content;
 	margin: 2%;
 	padding: 1%;
 	background: rgba(18, 21, 24, 0.398);
