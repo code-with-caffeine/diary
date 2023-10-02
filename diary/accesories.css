@@ -1,0 +1,9 @@
+.seprator{
+	height: 80vh;
+	width: 2vh;
+	background: rgba(5, 12, 26, 0);
+}
+
+.hide{
+	transform: scale(0);
+}

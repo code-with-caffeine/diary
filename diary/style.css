@@ -1,0 +1,231 @@
+*{
+	padding: 0;
+	margin: 0;
+	transition: .25s;
+}
+body{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-family: montserrat;
+	width: 100%;
+	background-image: url("static/forest1.png");
+	background-size: 100%;
+}
+.decor{
+	position: fixed;
+}
+
+.one{
+	position: fixed;	
+	animation: rotation 8s linear infinite;
+}
+.d1{
+	top: 7rem;
+	left: 1rem;
+	animation: rotation 8s linear infinite;
+
+}
+.d2{
+	top: 40rem;
+	left: 25rem;
+	animation: rotation 6s linear infinite;
+
+}
+.d3{
+	left: 50rem;
+	top: 7rem;
+	animation: rotation 10s linear infinite;
+
+}
+@keyframes rotation{
+	0% {transform: rotate(0deg);}
+	20% {transform: rotate(72deg);}
+	40% {transform: rotate(144deg);}
+	60% {transform: rotate(216deg);}
+	80% {transform: rotate(288deg);}
+	100% {transform: rotate(360deg);}
+}
+@keyframes flash{
+	0% {box-shadow: 0px 0px 20px rgb(255, 226, 3);}
+	25% {box-shadow: 0px 0px 0px white; transform: scale(100%);}
+	50% {box-shadow: 0px 0px 20px rgb(255, 166, 0);
+		transform: scale(150%);}
+	75% {box-shadow: 0px 0px 0px white;transform: scale(100%);}
+	100% {box-shadow: 0px 0px 20px rgb(255,226, 3);}
+
+}
+.circle{
+	position: relative;
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: rgb(230, 255, 161);
+	border-radius: 1rem;
+	animation: flash 6s linear infinite;
+}
+.c1{
+	left: 5rem;
+	top: -8rem;
+	height: 0.3rem;
+	width: 0.3rem;
+}
+.c2{
+	top: -8rem;
+	left: 5rem;
+}
+.c3{
+	left: -20rem;
+}
+
+.header{
+	position: realtive;
+	z-index: 100;
+	background: linear-gradient(to bottom, black, rgba(255, 255, 255, 0));
+	padding: 2.5vh;
+	border-radius: 0rem 0rem 0.5rem 0.5rem;
+	
+}
+
+.htext{
+	color: white;
+	font-weight: 800;
+	letter-spacing: 0.05rem;
+	font-size: 4.6vh;
+	width: fit-content;
+	padding: 5px 10px;
+	border-radius: 15px;
+	transition: 0.25s;
+}
+.htext:hover{
+	color: rgba(255, 255, 255, 0.659);;
+}
+/*Settings*/
+
+.settings{
+	transition: 1s;
+	position: relative;
+	z-index: 100;
+	background: rgba(18, 21, 24, 0.658);
+	border-radius: 10px;
+	align-items: center;
+	translate: 40vw 30vh;
+    color: white;
+    font-size: 3.5vh;
+    line-height: 4.5vh;
+    letter-spacing: 0.08rem;
+	width: fit-content;
+	padding: 1em;
+	border: 1px solid rgba(0, 0, 0, 0.432);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.616);
+}
+.settings-content{
+	padding: 4px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	align-items: center;
+	border: 1px solid transparent;
+}
+.settings-content:hover{
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.main{
+	position: absolute;
+	margin-top: 12vh;
+	margin-left: 2vh;
+	width: 98%;
+	height:86vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.writing-area{
+	
+	width: 70%;
+	background: rgba(18, 21, 24, 0.398);
+	backdrop-filter: blur(4px);
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.933);
+	display: flex;
+	flex-direction: column;
+}
+.date-area{
+	width: 30%;
+	background: rgba(18, 21, 24, 0.398);
+	backdrop-filter: blur(4px);
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.933);
+	display: flex;
+	flex-direction: column;
+	color: white;
+	justify-content: center;
+	align-items: left;
+	list-style: none;
+	overflow-y:scroll;
+	overflow-x: hidden;
+}
+
+.date-area::-webkit-scrollbar {
+  display: none;
+}
+
+.date-area {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.date{
+	position: relative;
+	color: rgba(255, 255, 255, 0.679);
+	z-index: 2;
+	height: 10%;
+	font-size: 1.3vw;
+	border: 5px black;
+}
+.date:hover{
+	color: white;
+	z-index: 10;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.65);
+}
+.dtext{
+	padding: 0.98vw;
+}
+.dtext:hover{
+	transform: translate(10px);
+}
+.htxt{
+	padding: 1em;
+	font-size: large;
+}
+
+
+
+
+
+.write{
+	border-radius: 10px;
+	width: 92%;
+	margin: 2%;
+	padding: 2%;
+	height: 65vh;
+	background: rgba(18, 21, 24, 0.398);
+	font-size: large;
+	color:rgba(255, 255, 255, 0.8);
+	
+}
+.write:focus{
+	outline: none;
+}
+
+
+.save{
+	/*margin-left: auto;
+	margin-right: 0;*/
+	margin: 2%;
+	padding: 1%;
+	background: rgba(18, 21, 24, 0.398);
+	font-size: large;
+	color:rgba(255, 255, 255, 0.8);
+	border: 1px gray solid;
+	border-radius: 10px;
+}
+.save:hover{
+	border: 1px white solid;
+}	
