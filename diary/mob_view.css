@@ -1,0 +1,10 @@
+@media only screen and (max-width: 768px) {
+  
+  .date-area{
+    display: none;
+  }
+  .writing-area{
+    width: 90%;
+  }
+  
+}
