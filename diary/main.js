@@ -1,7 +1,7 @@
-function qs(x){
+function qs(x) {
 	return document.querySelector(x)
 }
-function qsa(x){
+function qsa(x) {
 	return document.querySelectorAll(x)
 }
 
@@ -14,20 +14,18 @@ const Font = qs('#Font')
 const About = qs('#About')
 
 
-htext.addEventListener('click', ()=>{
+htext.addEventListener('click', () => {
 	settings.classList.toggle('hide')
 })
-function dates(){
+
 for (var i = 1; i < 31; i++) {
-	dateArea.innerHTML+='<li class="date"><p class="dtext"> Date:&emsp;January&ensp;'+i+',&ensp;2023 </p></li>'
-}
-}
-
-function add_click(){
-const date = qsa('.dtext')
-date.addEventListener('click', () => {
-	date.classList.add('active')
-})
+	dateArea.innerHTML += '<li class="date"><p class="dtext"> Date:&emsp;January&ensp;' + i + ',&ensp;2023 </p></li>'
 }
 
-dates().then(add_click())
+
+const date = document.querySelectorAll('.date')
+for (var i = 0; i < date.length; i++) {
+	date[i].addEventListener('click', (e) => {
+		e.target.classList.toggle('active')
+	})
+}
