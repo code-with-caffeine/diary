@@ -17,14 +17,12 @@ body{
 }
 
 .one{
-	position: fixed;	
-	animation: rotation 8s linear infinite;
+	position: relative;	
 }
 .d1{
 	top: 7rem;
 	left: 1rem;
 	animation: rotation 8s linear infinite;
-
 }
 .d2{
 	top: 40rem;
@@ -38,6 +36,7 @@ body{
 	animation: rotation 10s linear infinite;
 
 }
+
 @keyframes rotation{
 	0% {transform: rotate(0deg);}
 	20% {transform: rotate(72deg);}
@@ -102,7 +101,7 @@ body{
 /*Settings*/
 
 .settings{
-	transition: 1s;
+	transition: 0.5s;
 	position: relative;
 	z-index: 100;
 	background: rgba(18, 21, 24, 0.658);
@@ -114,11 +113,13 @@ body{
     line-height: 4.5vh;
     letter-spacing: 0.08rem;
 	width: fit-content;
-	padding: 1em;
+	padding: 0.8em;
 	border: 1px solid rgba(0, 0, 0, 0.432);
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.616);
 }
 .settings-content{
+	text-align: center;
+	margin: 0.3rem;
 	padding: 4px;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -126,7 +127,8 @@ body{
 	border: 1px solid transparent;
 }
 .settings-content:hover{
-	border: 1px solid gray;
+	background-color: rgba(255, 255, 255, 0.04);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.296);
 	border-radius: 5px;
 }
 .main{
@@ -140,11 +142,11 @@ body{
 }
 
 .writing-area{
-	
+	border-radius: 15px;
 	width: 70%;
 	background: rgba(18, 21, 24, 0.398);
 	backdrop-filter: blur(4px);
-	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.933);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 	display: flex;
 	flex-direction: column;
 }
@@ -167,10 +169,13 @@ body{
 }
 
 .date-area {
+	box-shadow: 0px 0px 20px black;
+	border-radius: 15px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 .date{
+	border-radius: 10px;
 	position: relative;
 	color: rgba(255, 255, 255, 0.679);
 	z-index: 2;
@@ -179,15 +184,16 @@ body{
 	border: 5px black;
 }
 .date:hover{
+	background-color: rgba(255, 255, 255, 0.02);
 	color: white;
 	z-index: 10;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.65);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.426);
 }
 .dtext{
 	padding: 0.98vw;
 }
 .dtext:hover{
-	transform: translate(10px);
+	transform: translate(5px);
 }
 .htxt{
 	padding: 1em;
@@ -207,7 +213,12 @@ body{
 	background: rgba(18, 21, 24, 0.398);
 	font-size: large;
 	color:rgba(255, 255, 255, 0.8);
-	
+	overflow: scroll;
+	box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.467) inset;
+}
+.write::-webkit-scrollbar{
+	height: 0;
+	width: 0;
 }
 .write:focus{
 	outline: none;
@@ -218,13 +229,12 @@ body{
 	margin-right: 0;*/
 	width: fit-content;
 	margin: 2%;
-	padding: 1%;
+	padding: 1% 1.5%;
 	background: rgba(18, 21, 24, 0.398);
 	font-size: large;
 	color:rgba(255, 255, 255, 0.8);
-	border: 1px gray solid;
 	border-radius: 10px;
 }
 .save:hover{
-	border: 1px white solid;
+	background-color: rgba(255, 255, 255, 0.049);
 }	
